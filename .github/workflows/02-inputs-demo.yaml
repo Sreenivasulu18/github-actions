@@ -32,7 +32,6 @@ on:
         description: "Number of retries"
         required: false 
         default: "3"
-        
 
 jobs:
   print-inputs:
