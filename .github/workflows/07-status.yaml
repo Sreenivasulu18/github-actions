@@ -10,4 +10,11 @@ jobs:
       - name: Run Build 
         run: |
           echo "Running Build..."
-          exit 1    # Simulate a build failure
+          exit 1    # Simulate a build failure 
+
+      
+      #-------------------------------
+      # POST SELECTION (Jenkins Style)
+      #-------------------------------
+
+      
