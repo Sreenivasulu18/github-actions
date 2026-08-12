@@ -1,0 +1,13 @@
+name: Job Post Selection Example 
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: checkout 
+        run: echo "Clonning repo..."
+
+      - name: Run Build 
+        run: |
+          echo "Running Build..."
+          exit 1    # Simulate a build failure
