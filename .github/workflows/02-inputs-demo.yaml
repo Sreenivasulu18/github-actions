@@ -7,7 +7,7 @@ on:
         required: true 
         default: "DevOps Engineer"
       
-      name: 
+      env: 
         description: "Select Environment (GitHub environment type)"
         required: true
         type: environment
@@ -26,12 +26,12 @@ on:
           - warn 
           - error
         required: true 
-        deafult: info 
+        default: info 
       
       retry_count:
         description: "Number of retries"
         required: false 
-        deafult: "3"
+        default: "3"
 
 jobs:
   print-inputs:
@@ -40,6 +40,6 @@ jobs:
       - name: Print Inputs 
         run: |
           echo "Name: ${{ github.event.inputs.name }}"
-          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Environment: ${{ github.event.inputs.env }}"
           echo "Retry Count ${{ github.event.inputs.retry_count }}"
           echo "Log Level: ${{ github.event.inputs.log_level }}"
