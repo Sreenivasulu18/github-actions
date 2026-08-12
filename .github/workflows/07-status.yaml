@@ -17,4 +17,18 @@ jobs:
       # POST SELECTION (Jenkins Style)
       #-------------------------------
 
+      - name: Post - Success
+        if: ${{ Success() }}
+        run: echo "Job SUCCESS - run success task here"
+
+      - name: Post - Failure
+        if: ${{ failure() }}
+        run: echo "Job FAILURE - run failure task here"
+
+      - name: Post - Cancelled
+        if: ${{ cancelled() }}
+        run: echo "Job CANCELLED - run cancelled task here"
       
+      - name: Post - Always 
+        if: ${{ always() }}
+        run: echo "Job ALWAYS - this runs no matter what (cleanup)"
