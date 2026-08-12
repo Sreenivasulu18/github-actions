@@ -1,0 +1,8 @@
+name: Hello World   # workflow name 
+on: [push]   # trigger workflow on push event
+jobs:  # it contain multiple jobs 
+  hello: # job name 
+    runs-on: ubuntu-latest  # where to run the job 
+    steps:
+      - name: Print Hello World 
+        run: echo "Hello, World!"
